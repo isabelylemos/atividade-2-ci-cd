@@ -2,14 +2,14 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: ["master"] 
+    branches: ["main"] 
     paths-ignore:
       - 'README.md'       
       - 'docs/**'         
       - 'LICENSE'         
       - 'CONTRIBUTING.md' 
   pull_request:
-    branches: ["master"] 
+    branches: ["main"] 
     paths-ignore:
       - 'README.md'      
       - 'docs/**'         
@@ -36,7 +36,7 @@ jobs:
   cd:
     needs: ci
 
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
 
     runs-on: ubuntu-latest
 
